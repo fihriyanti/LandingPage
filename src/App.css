@@ -20,13 +20,14 @@
   background-image: url('./assets/bg.jpeg');
   background-repeat: no-repeat;
   /* min-height: 100vh; */  
-  height: 600px;
+  height: 700px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  color: black;
+  color: white;
   opacity: 0.8;
+  padding-left: 30px;
 }
 
 .App-service {
@@ -36,10 +37,12 @@
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .App-title {
   color: #245664;
+  text-align: center;
 }
 
 .App-service2 {
@@ -47,17 +50,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
-.App-service2img {
-  border-radius: 20px;
-  margin-bottom: 10px;
+.App-bg {
+  /* background-color: #4b83918c; */
+  /* padding-top: 20px; */
+  padding-right: 50px;
+  padding-bottom: 20px;
+}
+
+.bg {
+  padding: 10px;
+  background-color: black;
+  color:white;
+}
+
+.App-txt {
+  padding-left: 50px;
+  padding-right: 20px;
+}
+
+.btn {
+  width: 200px;
+  color: #70dbf8;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 30px;
 }
 
 /* End Home CSS */
 
 .App-link {
   color: #61dafb;
+  color: #1a8faf;
 }
 
 @keyframes App-logo-spin {

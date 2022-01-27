@@ -1,12 +1,14 @@
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography, Card } from '@mui/material';
 import '../App.css';
 import '../component/Navbar.css';
+import Gambar from '../assets/bgg.jpg';
+import Progress from '../component/Progress.js';
+import CardService from '../component/Card.js'
+import Footer from '../component/Footer.js';
 import Navbar from '../component/Navbar';
-import Dental from '../assets/dental.jpg';
-import Doctor from '../assets/doctor.jpeg';
-import Eyes from '../assets/eyes.jpg';
-import Bg from '../assets/bgg.jpg';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -25,58 +27,66 @@ function Home() {
                 <Box>
                     <Grid xs={12}>
                         <Box className="App-header">
-                            <Typography variant="h1">Media Hospital</Typography>
+                            <Typography variant="h1" align='left'>Media</Typography>
+                            <Typography variant="h1" align='left'>Hospital</Typography>
                             <Typography variant="h5">You're best hospital</Typography>
                         </Box>
                     </Grid>
-                    <Grid xs={12}>
+                    <Grid xs={12} id="service">
                         <Box className="App-service">
-                            <Typography variant="h4" className='App-title'>Our best service</Typography>
+                            <Typography variant="h4" className='App-title'>Our Service</Typography>
+                            <CardService />
                         </Box>
                     </Grid>
-                    <Grid container style={{ paddingBottom: '10px' }}>
-                        <Grid item xs={4}>
-                            <Box className="App-service2">
-                                <img className="App-service2img" src={Dental} alt='Dental Care' width={350} height={350} />
-                                <Typography variant="h5">Dental Care</Typography>
+                    <Grid container  id="statistics" spacing={2} className="App-service2">
+                        <Grid item xs={12}>
+                            <Typography variant="h4" className='App-title'>Statistics</Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Box className="App-txt">
+                                <Typography variant="h4" style={{ paddingBottom: '20px' }}>We make it faster, easier, and more enjoyable to get care</Typography>
+                                <Typography variant="body1" style={{ paddingBottom: '20px' }}>We’ve positioned our beautiful offices near where you live, work, and travel. You can schedule same- or next-day
+                                    appointments that start on time. Our appointments are longer, and you’ll spend the whole time with an exceptional provider
+                                    who really listens.
+                                </Typography>
+                                <Button variant="contained" size="large">SEE MORE</Button>
                             </Box>
                         </Grid>
-                        <Grid item xs={4}>
-                            <Box className="App-service2">
-                                <img className="App-service2img" src={Doctor} alt='Primary Care' width={350} height={350} />
-                                <Typography variant="h5">Primary Care</Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Box className="App-service2">
-                                <img className="App-service2img" src={Eyes} alt='Eye Care' width={350} height={350} />
-                                <Typography variant="h5">Eye Care</Typography>
+                        <Grid item xs={6}>
+                            <Box className="App-bg">
+                                <Progress />
                             </Box>
                         </Grid>
                     </Grid>
-                    <Grid xs={12} style={{ backgroundColor: '#4b83918c', paddingTop: '20px', paddingRight: '40px', paddingBottom: '20px' }}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12}>
-                                <Typography variant="h4" align='center'>
-                                    We make it faster, easier, and more enjoyable to get care
-                                </Typography>
-                            </Grid>
-                            <Grid item xs={5} className="App-service2">
-                                <img src={Bg} alt='Eye Care' width={450} height={350} />
-                            </Grid>
-                            <Grid item xs={7}>
-                                <Typography variant="h6" align='justify'>
-                                    Our hospitals and physicians are bringing the best of community and
-                                    academic medicine together as one.
-                                </Typography>
-                                <Typography variant="h6" align='justify'>
-                                    We’ve positioned our beautiful offices near where you live, work,
-                                    and travel. You can schedule same- or next-day appointments that
-                                    start on time. Our appointments are longer, and you’ll spend the
-                                    whole time with an exceptional provider who really listens.
-                                </Typography>
-                            </Grid>
+                    <Grid container  id="testi">
+                        <Grid item xs={12}>
+                            <Typography variant="h4" className='App-title'>Testimonial</Typography>
+                            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
+                                <Card sx={{ display: 'flex' }}>
+                                    <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+                                        <CardContent>
+                                            <Typography component="div" variant="h5">
+                                                Mildred Payne
+                                            </Typography>
+                                            <Typography variant="subtitle1" color="text.secondary" component="div">
+                                                Historically, drugs were discovered through identifying the active ingredient
+                                                from traditional remedies or by serendipitous discovery. Later chemical libraries
+                                                of synthetic small molecules.
+                                            </Typography>
+                                        </CardContent>
+                                    </Box>
+                                    <CardMedia
+                                        component="img"
+                                        sx={{ width: 1000 }}
+                                        image={Gambar}
+                                        alt="Live from space album cover"
+                                    />
+                                </Card>
+                            </Box>
                         </Grid>
+                    </Grid>
+                    <Grid id="contact" >
+                        <Footer/>
                     </Grid>
                 </Box>
             </ThemeProvider>
