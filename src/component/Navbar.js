@@ -1,21 +1,16 @@
 import * as React from 'react'
-import { useRef } from 'react'
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import AppBar from '@mui/material/AppBar';
-// import Button from '@mui/material/AppBar';
 import { Button, Link } from '@mui/material';
 import '../App.css';
+import './Navbar.css'
 import Logo from '../assets/building.svg';
 
-const preventDefault = (event) => event.preventDefault()
-
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
+// const preventDefault = (event) => event.preventDefault()
 
 export default function Navbar() {
-  const myRef = useRef(null)
-  const executeScroll = () => scrollToRef(myRef)
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -44,11 +39,10 @@ export default function Navbar() {
                 ml: 2,
               },
             }}
-            onClick={preventDefault}
+          // onClick={preventDefault}
           >
             <Link className="menu" color="black" href="#" underline="none">Home</Link>
-            <Link className="menu" color="black" href="localhost:3000/#service" underline="none">Service</Link>
-            {/* <Button className="menu" color="black" onClick={executeScroll}>Service</Button> */}
+            <Link className="menu" color="black" href="#bagian" underline="none">Service</Link>
             <Link className="menu" color="black" href="#statistics" underline="none">Statistics</Link>
             <Link className="menu" color="black" href="#testi" underline="none">Testimonial</Link>
             <Link className="menu" color="black" href="#contact" underline="none">Contact</Link>

@@ -19,7 +19,7 @@ function Footer() {
         <>
             <ThemeProvider theme={theme}>
                 <Box className="bg">
-                    <Grid container spaicing={2} className="footer">
+                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} className="footer">
                         <Grid item xs={4} style={{ display: 'flex', flexDirection: 'column' }}>
                             {/* <Box
                                 component='img'
@@ -46,7 +46,7 @@ function Footer() {
                         </Grid>
                         <Grid item xs={4} style={{ display: 'flex', flexDirection: 'column', alignItems: "center", justifyContent: "center" }}>
                             <Typography variant="h6">Get started with Media</Typography>
-                            <Button variant="contained" className='btn'>SIGN UP NOW</Button>
+                            <Button variant="contained" size="medium" className='btn'>SIGN UP NOW</Button>
                         </Grid>
                     </Grid>
                     <Grid xs={12} spacing={2}>

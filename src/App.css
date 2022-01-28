@@ -56,7 +56,8 @@
 .App-bg {
   /* background-color: #4b83918c; */
   /* padding-top: 20px; */
-  padding-right: 50px;
+  /* padding-left: 20px; */
+  /* padding-right: 50px; */
   padding-bottom: 20px;
 }
 
@@ -72,7 +73,7 @@
 }
 
 .btn {
-  width: 200px;
+  /* width: 200px; */
   color: #70dbf8;
 }
 
